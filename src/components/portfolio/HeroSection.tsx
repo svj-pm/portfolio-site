@@ -29,7 +29,7 @@ const HeroSection = () => {
             <span className="gradient-text-white">Santiago Vinoth</span><br /><span className="gradient-text-white">Jeyaseelan</span>
           </motion.h1>
           <motion.p initial={{ y: 30, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.3, duration: 0.8 }} className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-8 gradient-text-blue">
-            VP of Product | D2C Product Leader
+            VP of Product | D2C & Growth Leader
           </motion.p>
           <motion.div initial={{ y: 30, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.4, duration: 0.8 }} className="glass rounded-2xl p-8 mb-10 max-w-4xl mx-auto">
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
@@ -37,7 +37,7 @@ const HeroSection = () => {
             </p>
           </motion.div>
           <motion.div initial={{ y: 30, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.5, duration: 0.8 }} className="flex flex-wrap justify-center gap-4 mb-12">
-            {["D2C Fintechs", "Wealthtechs", "FAANG"].map((tag) => (
+            {["D2C Fintechs", "Wealthtechs", "Large Financial Institutions"].map((tag) => (
               <span key={tag} className="relative group">
                 <span className="absolute inset-0 bg-gradient-to-r from-primary to-accent rounded-full blur-sm opacity-50 group-hover:opacity-100 transition-opacity"></span>
                 <span className="relative px-8 py-3 glass rounded-full text-sm md:text-base font-medium text-foreground flex items-center gap-2">
