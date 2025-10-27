@@ -13,7 +13,7 @@ const WorkProducts = () => {
     {
       name: "Gainbridge D2C Platform",
       description:
-        "Revolutionary digital annuity platform bringing retirement savings products directly to consumers through an intuitive, AI-powered experience.",
+        "Revolutionary digital platform bringing retirement savings products directly to consumers through an intuitive, AI-powered experience.",
       features: [
         "End-to-end digital annuity purchasing",
         "AI-driven retirement planning tools",
