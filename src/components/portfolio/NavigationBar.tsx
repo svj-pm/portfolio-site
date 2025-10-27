@@ -35,7 +35,7 @@ const NavigationBar = () => {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">
             <button onClick={() => scrollToSection("hero")} className="text-xl font-bold gradient-text-blue hover:scale-105 transition-transform">
-              Santiago V. J.
+              SVJ
             </button>
             <div className="hidden md:flex items-center gap-8">
               {navLinks.map((link) => (
