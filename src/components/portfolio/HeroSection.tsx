@@ -29,7 +29,7 @@ const HeroSection = () => {
             <span className="gradient-text-white">Santiago Vinoth</span><br /><span className="gradient-text-white">Jeyaseelan</span>
           </motion.h1>
           <motion.p initial={{ y: 30, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.3, duration: 0.8 }} className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-8 gradient-text-blue">
-            VP of Product | D2C & Growth Leader
+            VP of Product | D2C Growth Leader
           </motion.p>
           <motion.div initial={{ y: 30, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.4, duration: 0.8 }} className="glass rounded-2xl p-8 mb-10 max-w-4xl mx-auto">
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
@@ -37,7 +37,7 @@ const HeroSection = () => {
             </p>
           </motion.div>
           <motion.div initial={{ y: 30, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.5, duration: 0.8 }} className="flex flex-wrap justify-center gap-4 mb-12">
-            {["D2C Fintechs", "Wealthtechs", "Large Financial Institutions"].map((tag) => (
+            {["Fintechs", "Insurtechs", "Large Financial Institutions"].map((tag) => (
               <span key={tag} className="relative group">
                 <span className="absolute inset-0 bg-gradient-to-r from-primary to-accent rounded-full blur-sm opacity-50 group-hover:opacity-100 transition-opacity"></span>
                 <span className="relative px-8 py-3 glass rounded-full text-sm md:text-base font-medium text-foreground flex items-center gap-2">
@@ -49,11 +49,11 @@ const HeroSection = () => {
           <motion.div initial={{ y: 30, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.6, duration: 0.8 }} className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
             <button onClick={() => scrollToSection("work")} className="relative group px-10 py-5 rounded-xl font-semibold text-lg overflow-hidden">
               <span className="absolute inset-0 bg-gradient-to-r from-primary via-primary-glow to-primary bg-[length:200%_100%] animate-gradient-shift"></span>
-              <span className="relative text-white flex items-center justify-center gap-2 group-hover:scale-105 transition-transform">View Work Products</span>
+              <span className="relative text-white flex items-center justify-center gap-2 group-hover:scale-105 transition-transform">View My Work</span>
             </button>
             <button onClick={() => scrollToSection("contact")} className="relative group px-10 py-5 rounded-xl font-semibold text-lg glass hover:glass-strong transition-all">
               <span className="absolute inset-0 bg-gradient-to-r from-primary to-accent opacity-0 group-hover:opacity-20 transition-opacity rounded-xl"></span>
-              <span className="relative text-foreground group-hover:text-white transition-colors">Connect with Me</span>
+              <span className="relative text-foreground group-hover:text-white transition-colors">Let's Connect</span>
             </button>
           </motion.div>
           <motion.div initial={{ y: 30, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.7, duration: 0.8 }} className="flex justify-center gap-6">
