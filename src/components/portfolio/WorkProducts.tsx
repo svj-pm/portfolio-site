@@ -67,17 +67,13 @@ const WorkProducts = () => {
               transition={{ duration: 0.6, delay: 0.2 + index * 0.2 }}
             >
               <Card className="h-full hover:shadow-2xl transition-all hover:-translate-y-2 overflow-hidden group">
-                {/* Gradient Header */}
-                <div className={`h-48 bg-gradient-to-br ${product.gradient} relative overflow-hidden`}>
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <Rocket className="w-20 h-20 text-white/20 group-hover:scale-110 transition-transform" />
-                  </div>
-                  <div className="absolute bottom-4 left-6">
-                    <div className="bg-white/90 backdrop-blur-sm px-4 py-2 rounded-lg">
-                      <p className="text-sm font-bold text-foreground">Product Screenshot</p>
-                      <p className="text-xs text-muted-foreground">Placeholder</p>
-                    </div>
-                  </div>
+                {/* Product Screenshot */}
+                <div className="h-64 relative overflow-hidden bg-background">
+                  <img 
+                    src={index === 0 ? "/gainbridge.png" : "/marqeta.png"}
+                    alt={`${product.name} screenshot`}
+                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                  />
                 </div>
 
                 <CardHeader>
