@@ -22,7 +22,13 @@ const HeroSection = () => {
           <motion.div initial={{ scale: 0, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ duration: 0.8, type: "spring" }} className="mb-12">
             <div className="relative inline-block">
               <div className="absolute inset-0 bg-gradient-to-r from-primary via-accent to-primary bg-[length:200%_100%] rounded-full blur-xl opacity-60 animate-gradient-shift"></div>
-              <div className="relative w-36 h-36 rounded-full bg-gradient-to-br from-primary via-accent to-primary-glow flex items-center justify-center text-5xl font-bold text-white shadow-2xl animate-float">SV</div>
+              <div className="relative w-36 h-36 rounded-full p-1 bg-gradient-to-br from-primary via-accent to-primary-glow animate-float">
+                <img 
+                  src="/headshot.jpg" 
+                  alt="Santiago Vinoth Jeyaseelan - Professional Headshot" 
+                  className="w-full h-full rounded-full object-cover shadow-2xl"
+                />
+              </div>
             </div>
           </motion.div>
           <motion.h1 initial={{ y: 30, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.2, duration: 0.8 }} className="text-6xl md:text-8xl lg:text-9xl font-bold mb-6 leading-none">
