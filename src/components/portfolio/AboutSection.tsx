@@ -24,7 +24,7 @@ const AboutSection = () => {
           className="text-center mb-12"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Product Leader & Strategic Builder
+            Product Builder & Strategic Leader
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-primary via-accent to-success mx-auto"></div>
         </motion.div>
@@ -39,7 +39,7 @@ const AboutSection = () => {
             Product leader with GM‑adjacent ownership building and scaling D2C, B2B, and B2B2C products.
             Led <span className="text-accent font-semibold">$XXXM growth</span> and launched products and
             new verticals for fintech, insurtech, and large financial institutions. Built, grew, and retained
-            high-performing teams across PM, Design, Analytics, & Prod Ops.
+            high-performing teams across PM, Design, Analytics, & Product Operations.
           </p>
 
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed text-center">
