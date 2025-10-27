@@ -10,37 +10,37 @@ const CareerHighlights = () => {
 
   const roles = [
     {
-      company: "Company Name 1",
-      role: "Role Title",
-      period: "Year - Year",
+      company: "Gainbridge",
+      role: "VP of Product",
+      period: "2022 - 2025",
       achievements: [
-        "Led product strategy and execution for [product/platform]",
-        "Drove $XXM revenue growth through innovative product features",
+        "Led product strategy and execution for the entire products & platform",
+        "Drove $XX million revenue run rate through innovative product features",
         "Built and scaled cross-functional team of XX+ members",
       ],
-      tags: ["D2C", "Fintech", "0→1"],
+      tags: ["D2C", "Insurtech", "Scale"],
     },
     {
-      company: "Company Name 2",
-      role: "Role Title",
-      period: "Year - Year",
+      company: "Marqeta",
+      role: "Director of Product Management",
+      period: "2019 - 2022",
       achievements: [
-        "Launched [number] new products/verticals with XX% adoption rate",
-        "Optimized platform performance resulting in XX% efficiency gains",
-        "Established product operations framework for scaling teams",
+        "Launched new product verticals with XXX million in TPV",
+        "Optimized API performance resulting in four-9 uptime, <=500ms latency",
+        "Established product launch playbooks for scaling customer programs",
       ],
-      tags: ["B2B2C", "Insurtech", "Scale"],
+      tags: ["B2B2C", "Fintech", "0→1→scale"],
     },
     {
-      company: "Company Name 3",
-      role: "Role Title",
-      period: "Year - Year",
+      company: "Bank of the West",
+      role: "Senior Consultant, Product",
+      period: "2017 - 2019",
       achievements: [
-        "Defined and executed product roadmap for [platform/product]",
-        "Implemented data-driven experimentation framework",
-        "Increased user engagement by XX% through product optimization",
+        "Launched card and payments servicing features via Online/Web and Mobile banking channels, improved UX for over 1.5M+ customers",
+        "Transformed Bank of the West’s entire card servicing products and features, including credit, debit, and prepaid cards across consumer, SMB, and commercial portfolios.",
+        "Increased user engagement by XX% through product improvements",
       ],
-      tags: ["Wealthtech", "Growth", "Platform"],
+      tags: ["Large FI", "Retention", "D2C"],
     },
   ];
 
