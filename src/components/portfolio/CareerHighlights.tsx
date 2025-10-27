@@ -46,14 +46,16 @@ const CareerHighlights = () => {
 
   const testimonials = [
     {
-      quote: "[Testimonial placeholder - Add your testimonial quote here]",
-      author: "Name",
-      title: "Title, Company",
+      quote:
+        "Santiago's proven execution capabilities in his role as Director of Product Management at Marqeta, Inc. were critical for the company's growth and differentiation in the marketplace.",
+      author: "Jason Gardner",
+      title: "Founder & Director, Marqeta, Inc.",
     },
     {
-      quote: "[Testimonial placeholder - Add your testimonial quote here]",
-      author: "Name",
-      title: "Title, Company",
+      quote:
+        "As a pioneer in the annuity industry, a niche space in the insurance world, it was extremely important for Gainbridge to stay differentiated and Santiago's contributions have been instrumental in helping us do that.",
+      author: "Justin Wee",
+      title: "President, Gainbridge",
     },
   ];
 
@@ -66,9 +68,7 @@ const CareerHighlights = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Career Highlights
-          </h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">Career Highlights</h2>
           <div className="w-24 h-1 bg-gradient-to-r from-primary via-accent to-success mx-auto"></div>
         </motion.div>
 
@@ -122,17 +122,13 @@ const CareerHighlights = () => {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="max-w-5xl mx-auto"
         >
-          <h3 className="text-3xl font-bold text-center text-foreground mb-8">
-            What Others Say
-          </h3>
+          <h3 className="text-3xl font-bold text-center text-foreground mb-8">What Others Say</h3>
           <div className="grid md:grid-cols-2 gap-6">
             {testimonials.map((testimonial, index) => (
               <Card key={index} className="bg-card hover:shadow-lg transition-shadow">
                 <CardContent className="pt-6">
                   <Quote className="w-8 h-8 text-accent mb-4" />
-                  <p className="text-muted-foreground italic mb-4 text-lg">
-                    "{testimonial.quote}"
-                  </p>
+                  <p className="text-muted-foreground italic mb-4 text-lg">"{testimonial.quote}"</p>
                   <div className="border-t border-border pt-4">
                     <p className="font-semibold text-foreground">{testimonial.author}</p>
                     <p className="text-sm text-muted-foreground">{testimonial.title}</p>
