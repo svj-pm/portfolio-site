@@ -14,9 +14,9 @@ const CareerHighlights = () => {
       role: "VP of Product",
       period: "2022 - 2025",
       achievements: [
-        "Led product strategy and execution for the entire products & platform",
+        "Scaled Gainbridge’s direct-to-consumer business from $XX million to $XX million in 2024, and on pace to exceed $X billion in 2025",
         "Drove $XX million revenue run rate through innovative product features",
-        "Built and scaled cross-functional team of XX+ members",
+        "Built and scaled the product function of XX+ members",
       ],
       tags: ["D2C", "Insurtech", "Scale"],
     },
@@ -25,8 +25,8 @@ const CareerHighlights = () => {
       role: "Director of Product Management",
       period: "2019 - 2022",
       achievements: [
-        "Launched new product verticals with XXX million in TPV",
-        "Optimized API performance resulting in four-9 uptime, <=500ms latency",
+        "Launched new product vertical with XXX million in TPV, ~XXX thousand accounts",
+        "Optimized API product performance to achieve 250-500ms SLOs for key APIs and maintain 99.99% platform uptime.",
         "Established product launch playbooks for scaling customer programs",
       ],
       tags: ["B2B2C", "Fintech", "0→1→scale"],
@@ -36,7 +36,7 @@ const CareerHighlights = () => {
       role: "Senior Consultant, Product",
       period: "2017 - 2019",
       achievements: [
-        "Launched card and payments servicing features via Online/Web and Mobile banking channels, improved UX for over 1.5M+ customers",
+        "Launched card and payments servicing features via Online/Web and Mobile banking channels, improved UX for over X million+ customers",
         "Transformed Bank of the West’s entire card servicing products and features, including credit, debit, and prepaid cards across consumer, SMB, and commercial portfolios.",
         "Increased user engagement by XX% through product improvements",
       ],
