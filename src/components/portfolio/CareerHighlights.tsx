@@ -14,7 +14,7 @@ const CareerHighlights = () => {
       role: "VP of Product",
       period: "2022 - 2025",
       achievements: [
-        "Scaled Gainbridge’s direct-to-consumer business from $XX million to $XX million in 2024, and on pace to exceed $X billion in 2025",
+        "Scaled Gainbridge’s direct-to-consumer business from $XX million to $XXX million in 2024, and on pace to exceed $X billion in 2025",
         "Drove $XX million revenue run rate through innovative product features",
         "Built and scaled the product function of XX+ members",
       ],
