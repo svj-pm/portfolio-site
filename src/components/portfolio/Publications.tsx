@@ -22,9 +22,9 @@ const Publications = () => {
       <div className="container mx-auto px-6 md:px-8">
         {/* Section header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.6 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.4 }}
           className="mb-14"
         >
           <div className="flex items-center gap-3 mb-5">
