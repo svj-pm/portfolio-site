@@ -66,7 +66,7 @@ const HeroSection = () => {
             href="https://www.linkedin.com/in/santiago-v-jeyaseelan/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#94a3b8] hover:text-[#3b82f6] transition-colors"
+            className="!text-[#94a3b8] hover:!text-[#3b82f6] transition-colors"
             aria-label="LinkedIn"
           >
             <Linkedin size={22} />
