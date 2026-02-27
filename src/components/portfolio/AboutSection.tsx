@@ -79,16 +79,17 @@ const AboutSection = () => {
         >
           {[
             "Product Strategy",
-            "0→1 Products",
-            "Scale & Growth",
+            "0→1→Scale",
             "P&L Ownership",
             "Team Leadership",
+            "AI Agent Systems",
+            "LLM Applications",
             "Fintech",
-            "Insurtech",
-            "D2C",
+            "Enterprise Software",
+            "B2B",
             "B2B2C",
-            "Analytics",
-            "Product Operations",
+            "DTC",
+            "API Platforms",
           ].map((skill, index) => (
             <span
               key={index}
