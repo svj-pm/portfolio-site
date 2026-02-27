@@ -24,6 +24,7 @@ const NavigationBar = () => {
   const navLinks = [
     { id: "about", label: "About" },
     { id: "career", label: "Career" },
+    { id: "building", label: "Building" },
     { id: "work", label: "Work" },
     { id: "publications", label: "Publications" },
     { id: "contact", label: "Contact" },
