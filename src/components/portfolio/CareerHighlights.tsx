@@ -110,34 +110,6 @@ const CareerHighlights = () => {
           </div>
         </div>
 
-        {/* Testimonials */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          className="mt-20 max-w-5xl mx-auto"
-        >
-          <h3 className="text-2xl md:text-3xl font-bold text-white font-heading text-center mb-8">
-            What Others Say
-          </h3>
-          <div className="grid md:grid-cols-2 gap-6">
-            {testimonials.map((t, index) => (
-              <div
-                key={index}
-                className="bg-[#1e293b] border border-[#334155] rounded-xl p-6 hover:shadow-lg transition-shadow"
-              >
-                <Quote className="w-7 h-7 text-[#3b82f6] mb-4" />
-                <p className="text-[#94a3b8] italic text-base leading-relaxed mb-4">
-                  "{t.quote}"
-                </p>
-                <div className="border-t border-[#334155] pt-4">
-                  <p className="font-semibold text-white text-sm">{t.author}</p>
-                  <p className="text-xs text-[#94a3b8]">{t.title}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </motion.div>
       </div>
     </section>
   );
