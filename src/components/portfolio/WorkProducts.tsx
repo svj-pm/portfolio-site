@@ -9,7 +9,7 @@ const products = [
     description:
       "Digital platform that brought retirement savings products directly to consumers. End-to-end digital annuity purchasing, AI-powered tools, and an optimized funnel converting thousands of high-value customers.",
     tags: ["D2C", "Insurtech", "Savings", "AI"],
-    link: "https://www.gainbridge.io/",
+    link: "https://www.gainbridge.com/",
     image: "/gainbridge.png",
   },
   {
