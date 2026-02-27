@@ -41,20 +41,6 @@ const roles = [
   },
 ];
 
-const testimonials = [
-  {
-    quote:
-      "Santiago's proven execution capabilities in his role as Director of Product Management at Marqeta, Inc. were critical for the company's growth and differentiation in the marketplace.",
-    author: "Jason Gardner",
-    title: "Founder & Director, Marqeta, Inc.",
-  },
-  {
-    quote:
-      "As a pioneer in the annuity industry, a niche space in the insurance world, it was extremely important for Gainbridge to stay differentiated and Santiago's contributions have been instrumental in helping us do that.",
-    author: "Justin Wee",
-    title: "President, Gainbridge",
-  },
-];
 
 const CareerHighlights = () => {
   const ref = useRef(null);
