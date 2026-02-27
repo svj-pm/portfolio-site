@@ -17,7 +17,7 @@ const products = [
     description:
       "Modern card issuing platform enabling businesses to create innovative credit card programs. API-first infrastructure with real-time transaction processing, customizable programs, and advanced rewards and fraud controls.",
     tags: ["B2B2C", "Payments", "Credit", "Platform"],
-    link: "https://www.marqeta.com/platform/credit",
+    link: "https://www.marqeta.com/docs/developer-guides/credit-landing-page/",
     image: "/marqeta.png",
   },
 ];
