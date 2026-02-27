@@ -47,7 +47,7 @@ const CareerHighlights = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="career" className="py-20 bg-[#111827] border-t border-[#1e293b]" ref={ref}>
+    <section id="career" className="py-16 md:py-24 bg-[#111827] border-t border-[#1e293b]" ref={ref}>
       <div className="container mx-auto px-6 md:px-8">
         {/* Section header */}
         <motion.div
