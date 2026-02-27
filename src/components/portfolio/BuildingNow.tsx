@@ -77,17 +77,23 @@ const BuildingNow = () => {
                       </span>
                     ))}
                   </div>
-                  <Button asChild variant="outline" className="w-full">
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center justify-center gap-2"
-                    >
-                      View on GitHub
-                      <ExternalLink className="w-4 h-4" />
-                    </a>
-                  </Button>
+                  {project.comingSoon ? (
+                    <Button variant="outline" className="w-full" disabled>
+                      Coming Soon
+                    </Button>
+                  ) : (
+                    <Button asChild variant="outline" className="w-full">
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-center gap-2"
+                      >
+                        View on GitHub
+                        <ExternalLink className="w-4 h-4" />
+                      </a>
+                    </Button>
+                  )}
                 </CardContent>
               </Card>
             </motion.div>
