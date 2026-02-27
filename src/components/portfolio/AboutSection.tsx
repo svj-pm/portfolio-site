@@ -36,16 +36,16 @@ const AboutSection = () => {
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed text-center mb-12">
             I've spent 15+ years building and scaling products across fintech, insurtech, and enterprise financial
             services — from consumer-facing platforms to B2B infrastructure to card issuing APIs. Led{" "}
-            <span className="text-accent font-semibold">$XXXM growth</span> and launched products and new verticals for
-            fintech, insurtech, and large financial institutions. Built, grew, and retained high-performing teams across
-            PM, Design, Analytics, & Product Operations.
+            <span className="text-accent font-semibold">$XXXM growth</span>, launched new product verticals, and built
+            cross-functional teams across PM, Design, Product Analytics, and Product Operations. Built, grew, and
+            retained high-performing teams across PM, Design, Analytics, & Product Operations.
           </p>
 
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed text-center">
-            Skilled in building <span className="text-primary font-semibold">0→1→scale products and platforms</span>,
-            setting clear strategies, conducting disciplined experiments, and driving{" "}
-            <span className="text-success font-semibold">P&L impact</span> at startups, scale-ups, and large traditional
-            organizations.
+            Now I'm building with AI. I develop agent systems that solve real problems: automating complex research
+            workflows, powering e-commerce marketing for a direct-to-consumer brand, and prototyping how AI can
+            transform enterprise operations. I believe product leaders who can't work directly with AI will struggle to
+            lead AI-powered teams effectively. So I build.
           </p>
         </motion.div>
 
