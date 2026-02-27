@@ -16,9 +16,9 @@ const ContactSection = () => {
     >
       <div className="container mx-auto px-6 md:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.6 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.4 }}
           className="text-center"
         >
           <h2 className="text-4xl md:text-[40px] font-bold text-white font-heading mb-6">Let's Build Together</h2>

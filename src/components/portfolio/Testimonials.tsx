@@ -43,9 +43,9 @@ const Testimonials = () => {
           {testimonials.map((t, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-              transition={{ duration: 0.6, delay: 0.15 + index * 0.15 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+              transition={{ duration: 0.4, delay: 0.1 + index * 0.1 }}
               className="relative bg-[#1e293b] border border-[#334155] rounded-xl p-6 pt-10 hover:border-[#3b82f6] hover:shadow-lg hover:shadow-[#3b82f6]/5 transition-all duration-300"
             >
               {/* Decorative quote mark */}

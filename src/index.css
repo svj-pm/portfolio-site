@@ -49,6 +49,10 @@
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   * {
     @apply border-border;
   }
@@ -62,6 +66,15 @@
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Space Grotesk', sans-serif;
     color: hsl(0 0% 100%);
+  }
+
+  a {
+    color: hsl(217 91% 60%);
+    transition: color 0.2s;
+  }
+
+  a:hover {
+    color: hsl(217 92% 69%);
   }
 }
 
