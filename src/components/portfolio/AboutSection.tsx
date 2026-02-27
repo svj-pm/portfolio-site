@@ -23,7 +23,7 @@ const AboutSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="about" className="py-20 bg-[#111827] border-t border-[#1e293b]" ref={ref}>
+    <section id="about" className="py-16 md:py-24 bg-[#111827] border-t border-[#1e293b]" ref={ref}>
       <div className="container mx-auto px-6 md:px-8">
         <div className="flex flex-col md:flex-row gap-12 md:gap-16 items-center md:items-start">
           {/* Left column — photo + social links */}
