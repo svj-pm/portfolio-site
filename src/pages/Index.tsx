@@ -2,6 +2,7 @@ import NavigationBar from "@/components/portfolio/NavigationBar";
 import HeroSection from "@/components/portfolio/HeroSection";
 import AboutSection from "@/components/portfolio/AboutSection";
 import CareerHighlights from "@/components/portfolio/CareerHighlights";
+import BuildingNow from "@/components/portfolio/BuildingNow";
 import WorkProducts from "@/components/portfolio/WorkProducts";
 import Publications from "@/components/portfolio/Publications";
 import ContactSection from "@/components/portfolio/ContactSection";
