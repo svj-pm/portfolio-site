@@ -23,9 +23,7 @@ const AboutSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Product Builder & Strategic Leader
-          </h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">Product Leader Who Builds</h2>
           <div className="w-24 h-1 bg-gradient-to-r from-primary via-accent to-success mx-auto"></div>
         </motion.div>
 
@@ -36,17 +34,17 @@ const AboutSection = () => {
           className="max-w-4xl mx-auto"
         >
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed text-center mb-12">
-            Product leader with GM‑adjacent ownership building and scaling D2C, B2B, and B2B2C products.
-            Led <span className="text-accent font-semibold">$XXXM growth</span> and launched products and
-            new verticals for fintech, insurtech, and large financial institutions. Built, grew, and retained
-            high-performing teams across PM, Design, Analytics, & Product Operations.
+            Product leader with GM‑adjacent ownership building and scaling D2C, B2B, and B2B2C products. Led{" "}
+            <span className="text-accent font-semibold">$XXXM growth</span> and launched products and new verticals for
+            fintech, insurtech, and large financial institutions. Built, grew, and retained high-performing teams across
+            PM, Design, Analytics, & Product Operations.
           </p>
 
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed text-center">
             Skilled in building <span className="text-primary font-semibold">0→1→scale products and platforms</span>,
             setting clear strategies, conducting disciplined experiments, and driving{" "}
-            <span className="text-success font-semibold">P&L impact</span> at startups, scale-ups, and large
-            traditional organizations.
+            <span className="text-success font-semibold">P&L impact</span> at startups, scale-ups, and large traditional
+            organizations.
           </p>
         </motion.div>
 
