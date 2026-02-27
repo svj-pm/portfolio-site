@@ -16,7 +16,7 @@ const ContactSection = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-primary/5 via-background to-accent/5" ref={ref}>
+    <section id="contact" className="py-20 bg-background" ref={ref}>
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -24,10 +24,10 @@ const ContactSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-4">
+          <h2 className="text-4xl md:text-6xl font-bold mb-4">
             Let's Build Something Great Together
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary via-accent to-success mx-auto"></div>
+          <div className="w-24 h-1 bg-primary mx-auto"></div>
         </motion.div>
 
         <motion.div
@@ -36,9 +36,8 @@ const ContactSection = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="max-w-4xl mx-auto"
         >
-          {/* Looking For Section */}
-          <div className="bg-card border border-border rounded-2xl p-8 md:p-12 mb-8 shadow-lg">
-            <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-6 text-center">
+          <div className="bg-card border border-border rounded-2xl p-8 md:p-12 mb-8">
+            <h3 className="text-2xl md:text-3xl font-bold mb-6 text-center">
               Looking for a D2C Product Leader?
             </h3>
             <p className="text-lg text-muted-foreground text-center mb-8">
@@ -46,7 +45,6 @@ const ContactSection = () => {
               high-performing teams.
             </p>
 
-            {/* Best Fit Points */}
             <div className="grid md:grid-cols-2 gap-4 mb-8">
               {fitPoints.map((point, index) => (
                 <motion.div
@@ -56,20 +54,19 @@ const ContactSection = () => {
                   transition={{ duration: 0.4, delay: 0.4 + index * 0.1 }}
                   className="flex items-start gap-3"
                 >
-                  <CheckCircle2 className="w-6 h-6 text-success flex-shrink-0 mt-1" />
+                  <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                   <p className="text-foreground">{point}</p>
                 </motion.div>
               ))}
             </div>
 
-            <div className="bg-secondary/50 rounded-xl p-6 mb-8">
+            <div className="bg-background border border-border rounded-lg p-6 mb-8">
               <p className="text-center text-foreground font-medium text-lg">
                 <span className="text-primary font-bold">Ideal for:</span> Companies seeking GM-adjacent product
                 ownership with proven track record in D2C fintechs, wealthtechs, and enterprise financial products
               </p>
             </div>
 
-            {/* Contact Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="text-lg px-8">
                 <a
@@ -95,7 +92,6 @@ const ContactSection = () => {
             </div>
           </div>
 
-          {/* Alternative Contact Info */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
@@ -104,7 +100,7 @@ const ContactSection = () => {
           >
             <p className="text-sm">
               Email:{" "}
-              <a href="mailto:san.vinodh@gmail.com" className="text-primary hover:underline font-medium">
+              <a href="mailto:san.vinodh@gmail.com" className="text-primary hover:text-primary-hover font-medium">
                 san.vinodh@gmail.com
               </a>
             </p>
@@ -114,7 +110,7 @@ const ContactSection = () => {
                 href="https://www.linkedin.com/in/santiago-v-jeyaseelan/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-primary hover:underline font-medium"
+                className="text-primary hover:text-primary-hover font-medium"
               >
                 Santiago V Jeyaseelan
               </a>

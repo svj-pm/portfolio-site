@@ -14,7 +14,7 @@ const CareerHighlights = () => {
       role: "VP of Product",
       period: "2022 - 2025",
       achievements: [
-        "Scaled Gainbridge’s direct-to-consumer business from $XX million to $XXX million in 2024, and on pace to exceed $X billion in 2025",
+        "Scaled Gainbridge's direct-to-consumer business from $XX million to $XXX million in 2024, and on pace to exceed $X billion in 2025",
         "Drove $XX million revenue run rate through innovative product features",
         "Built and scaled the product function of XX+ members",
       ],
@@ -37,7 +37,7 @@ const CareerHighlights = () => {
       period: "2017 - 2019",
       achievements: [
         "Launched card and payments servicing features via Online/Web and Mobile banking channels, improved UX for over X million+ customers",
-        "Transformed Bank of the West’s entire card servicing products and features, including credit, debit, and prepaid cards across consumer, SMB, and commercial portfolios.",
+        "Transformed Bank of the West's entire card servicing products and features, including credit, debit, and prepaid cards across consumer, SMB, and commercial portfolios.",
         "Increased user engagement by XX% through product improvements",
       ],
       tags: ["Large FI", "Retention", "D2C"],
@@ -60,7 +60,7 @@ const CareerHighlights = () => {
   ];
 
   return (
-    <section id="career" className="py-20 bg-secondary/30" ref={ref}>
+    <section id="career" className="py-20 bg-background" ref={ref}>
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -68,11 +68,10 @@ const CareerHighlights = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">Career Highlights</h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary via-accent to-success mx-auto"></div>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">Career Highlights</h2>
+          <div className="w-24 h-1 bg-primary mx-auto"></div>
         </motion.div>
 
-        {/* Career Cards */}
         <div className="grid md:grid-cols-3 gap-6 mb-16">
           {roles.map((role, index) => (
             <motion.div
@@ -81,7 +80,7 @@ const CareerHighlights = () => {
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
               transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
             >
-              <Card className="h-full hover:shadow-xl transition-all hover:-translate-y-1">
+              <Card className="h-full hover:shadow-xl transition-all hover:-translate-y-1 bg-card border-border">
                 <CardHeader>
                   <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
                     <Briefcase className="w-6 h-6 text-primary" />
@@ -94,7 +93,7 @@ const CareerHighlights = () => {
                   <ul className="space-y-3 mb-4">
                     {role.achievements.map((achievement, idx) => (
                       <li key={idx} className="text-sm text-muted-foreground flex items-start">
-                        <span className="text-accent mr-2">•</span>
+                        <span className="text-primary mr-2">•</span>
                         <span>{achievement}</span>
                       </li>
                     ))}
@@ -103,7 +102,7 @@ const CareerHighlights = () => {
                     {role.tags.map((tag, idx) => (
                       <span
                         key={idx}
-                        className="px-3 py-1 bg-secondary text-secondary-foreground rounded-full text-xs font-medium"
+                        className="px-3 py-1 bg-background text-muted-foreground rounded-lg text-xs font-medium"
                       >
                         {tag}
                       </span>
@@ -115,19 +114,18 @@ const CareerHighlights = () => {
           ))}
         </div>
 
-        {/* Testimonials */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6, delay: 0.6 }}
           className="max-w-5xl mx-auto"
         >
-          <h3 className="text-3xl font-bold text-center text-foreground mb-8">What Others Say</h3>
+          <h3 className="text-3xl font-bold text-center mb-8">What Others Say</h3>
           <div className="grid md:grid-cols-2 gap-6">
             {testimonials.map((testimonial, index) => (
-              <Card key={index} className="bg-card hover:shadow-lg transition-shadow">
+              <Card key={index} className="bg-card border-border hover:shadow-lg transition-shadow">
                 <CardContent className="pt-6">
-                  <Quote className="w-8 h-8 text-accent mb-4" />
+                  <Quote className="w-8 h-8 text-primary mb-4" />
                   <p className="text-muted-foreground italic mb-4 text-lg">"{testimonial.quote}"</p>
                   <div className="border-t border-border pt-4">
                     <p className="font-semibold text-foreground">{testimonial.author}</p>
