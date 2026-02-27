@@ -24,7 +24,7 @@ const HeroSection = () => {
                 <img
                   src="/headshot-ai-v2.png"
                   alt="Santiago Vinoth Jeyaseelan - Professional Headshot"
-                  className="w-full h-full rounded-full object-cover scale-[1.8] translate-y-[10px]"
+                  className="w-full h-full rounded-full object-cover scale-[1.6] translate-y-[10px]"
                 />
               </div>
             </div>
@@ -54,8 +54,8 @@ const HeroSection = () => {
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
               Product leader with <span className="text-foreground font-semibold">GM‑adjacent ownership</span> building
               and scaling D2C, B2B, and B2B2C products. Led{" "}
-              <span className="text-primary font-semibold">$XXXM growth</span> and launched products and new
-              verticals for fintech, insurtech, and large financial institutions.
+              <span className="text-primary font-semibold">$XXXM growth</span> and launched products and new verticals
+              for fintech, insurtech, and large financial institutions.
             </p>
           </motion.div>
           <motion.div
@@ -65,7 +65,10 @@ const HeroSection = () => {
             className="flex flex-wrap justify-center gap-4 mb-12"
           >
             {["Fintechs", "Insurtechs", "Large Financial Institutions"].map((tag) => (
-              <span key={tag} className="px-8 py-3 bg-card border border-border rounded-lg text-sm md:text-base font-medium text-foreground">
+              <span
+                key={tag}
+                className="px-8 py-3 bg-card border border-border rounded-lg text-sm md:text-base font-medium text-foreground"
+              >
                 {tag}
               </span>
             ))}
