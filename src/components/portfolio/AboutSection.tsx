@@ -8,10 +8,10 @@ const AboutSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const stats = [
-    { icon: TrendingUp, label: "$XXXM Growth", color: "text-accent" },
-    { icon: Users, label: "High-Performing Teams", color: "text-primary" },
-    { icon: Rocket, label: "0→1→Scale Products", color: "text-success" },
-    { icon: Target, label: "D2C, B2B, B2B2C", color: "text-accent" },
+    { icon: TrendingUp, label: "$XXXM Growth" },
+    { icon: Users, label: "High-Performing Teams" },
+    { icon: Rocket, label: "0→1→Scale Products" },
+    { icon: Target, label: "D2C, B2B, B2B2C" },
   ];
 
   return (
@@ -23,8 +23,8 @@ const AboutSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">Product Leader Who Builds</h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary via-accent to-success mx-auto"></div>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">Product Leader Who Builds</h2>
+          <div className="w-24 h-1 bg-primary mx-auto"></div>
         </motion.div>
 
         <motion.div
@@ -36,7 +36,7 @@ const AboutSection = () => {
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed text-center mb-12">
             I've spent 15+ years building and scaling products across fintech, insurtech, and enterprise financial
             services — from consumer-facing platforms to B2B infrastructure to card issuing APIs. Led{" "}
-            <span className="text-accent font-semibold">$XXXM growth</span>, launched new product verticals, and built
+            <span className="text-primary font-semibold">$XXXM growth</span>, launched new product verticals, and built
             cross-functional teams across PM, Design, Product Analytics, and Product Operations. Built, grew, and
             retained high-performing teams across PM, Design, Analytics, & Product Operations.
           </p>
@@ -62,9 +62,9 @@ const AboutSection = () => {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
               transition={{ duration: 0.4, delay: 0.5 + index * 0.1 }}
-              className="bg-card border border-border rounded-xl p-6 text-center hover:shadow-lg transition-shadow"
+              className="bg-card border border-border rounded-lg p-6 text-center"
             >
-              <stat.icon className={`w-12 h-12 mx-auto mb-3 ${stat.color}`} />
+              <stat.icon className="w-12 h-12 mx-auto mb-3 text-primary" />
               <p className="text-sm font-medium text-foreground">{stat.label}</p>
             </motion.div>
           ))}
@@ -93,7 +93,7 @@ const AboutSection = () => {
           ].map((skill, index) => (
             <span
               key={index}
-              className="px-4 py-2 bg-secondary text-secondary-foreground rounded-full text-sm font-medium hover:bg-primary hover:text-primary-foreground transition-colors"
+              className="px-4 py-2 bg-card text-foreground border border-border rounded-lg text-sm font-medium hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors"
             >
               {skill}
             </span>

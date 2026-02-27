@@ -3,7 +3,7 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Rocket } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 
 const WorkProducts = () => {
   const ref = useRef(null);
@@ -22,7 +22,6 @@ const WorkProducts = () => {
       ],
       tags: ["D2C", "Insurtech", "Savings", "AI"],
       link: "https://www.gainbridge.io/",
-      gradient: "from-primary to-accent",
     },
     {
       name: "Marqeta Credit Card Platform",
@@ -36,7 +35,6 @@ const WorkProducts = () => {
       ],
       tags: ["B2B2C", "Payments", "Credit", "Platform"],
       link: "https://www.marqeta.com/platform/credit",
-      gradient: "from-accent to-success",
     },
   ];
 
@@ -49,8 +47,8 @@ const WorkProducts = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">Work Products</h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary via-accent to-success mx-auto mb-4"></div>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">Work Products</h2>
+          <div className="w-24 h-1 bg-primary mx-auto mb-4"></div>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             Products I've built and scaled that are transforming industries
           </p>
@@ -64,8 +62,7 @@ const WorkProducts = () => {
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
               transition={{ duration: 0.6, delay: 0.2 + index * 0.2 }}
             >
-              <Card className="h-full hover:shadow-2xl transition-all hover:-translate-y-2 overflow-hidden group">
-                {/* Product Screenshot */}
+              <Card className="h-full hover:shadow-2xl transition-all hover:-translate-y-2 overflow-hidden group bg-card border-border">
                 <div className="h-64 relative overflow-hidden bg-background">
                   <img
                     src={index === 0 ? "/gainbridge.png" : "/marqeta.png"}
@@ -86,7 +83,7 @@ const WorkProducts = () => {
                       <ul className="space-y-2">
                         {product.features.map((feature, idx) => (
                           <li key={idx} className="text-sm text-muted-foreground flex items-start">
-                            <span className="text-accent mr-2">✓</span>
+                            <span className="text-primary mr-2">✓</span>
                             <span>{feature}</span>
                           </li>
                         ))}
@@ -97,7 +94,7 @@ const WorkProducts = () => {
                       {product.tags.map((tag, idx) => (
                         <span
                           key={idx}
-                          className="px-3 py-1 bg-secondary text-secondary-foreground rounded-full text-xs font-medium"
+                          className="px-3 py-1 bg-background text-muted-foreground rounded-lg text-xs font-medium"
                         >
                           {tag}
                         </span>

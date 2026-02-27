@@ -42,10 +42,10 @@ const BuildingNow = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
             What I'm Building Now
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary via-accent to-success mx-auto mb-6"></div>
+          <div className="w-24 h-1 bg-primary mx-auto mb-6"></div>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             I started building AI agent systems in 2025. Not tutorials or demos — tools that solve problems I actually have.
           </p>
@@ -59,7 +59,7 @@ const BuildingNow = () => {
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
               transition={{ duration: 0.6, delay: 0.2 + index * 0.15 }}
             >
-              <Card className="h-full hover:shadow-xl transition-all hover:-translate-y-1 flex flex-col">
+              <Card className="h-full hover:shadow-xl transition-all hover:-translate-y-1 flex flex-col bg-card border-border">
                 <CardHeader>
                   <CardTitle className="text-xl">{project.name}</CardTitle>
                 </CardHeader>
@@ -71,18 +71,18 @@ const BuildingNow = () => {
                     {project.tags.map((tag, idx) => (
                       <span
                         key={idx}
-                        className="px-3 py-1 bg-secondary text-secondary-foreground rounded-full text-xs font-medium"
+                        className="px-3 py-1 bg-background text-muted-foreground rounded-lg text-xs font-medium"
                       >
                         {tag}
                       </span>
                     ))}
                   </div>
                   {project.comingSoon ? (
-                    <Button variant="outline" className="w-full" disabled>
+                    <Button variant="outline" className="w-full opacity-50" disabled>
                       Coming Soon
                     </Button>
                   ) : (
-                    <Button asChild variant="outline" className="w-full">
+                    <Button asChild className="w-full">
                       <a
                         href={project.link}
                         target="_blank"
