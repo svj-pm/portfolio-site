@@ -24,7 +24,7 @@ const HeroSection = () => {
                 <img
                   src="/headshot-ai-v2.png"
                   alt="Santiago Vinoth Jeyaseelan - Professional Headshot"
-                  className="w-full h-full rounded-full object-cover scale-[1.6] translate-y-[15px]"
+                  className="w-full h-full rounded-full object-cover scale-[1.6] translate-y-[20px]"
                 />
               </div>
             </div>
