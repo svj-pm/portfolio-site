@@ -56,7 +56,7 @@ const ContactSection = () => {
               Connect on LinkedIn
             </a>
             <a
-              href="https://github.com/"
+              href="https://github.com/svj-pm"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-[#3b82f6] text-[#3b82f6] text-sm font-medium rounded-lg hover:bg-[#3b82f6]/10 transition-colors"
