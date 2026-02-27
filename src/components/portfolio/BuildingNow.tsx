@@ -29,7 +29,7 @@ const BuildingNow = () => {
       description:
         "Concept work exploring how LLMs and agent architectures can transform enterprise workflows — document classification, policy-aware automation, and intelligent routing systems. Architecture documentation and working prototypes.",
       tags: ["LLMs", "Agent Architecture", "Automation"],
-      link: "https://github.com/",
+      comingSoon: true,
     },
   ];
 
