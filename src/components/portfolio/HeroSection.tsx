@@ -22,9 +22,9 @@ const HeroSection = () => {
             <div className="relative inline-block">
               <div className="w-40 h-40 rounded-full p-1 border-2 border-primary overflow-hidden">
                 <img
-                  src="/headshot-ai.png"
+                  src="/headshot-ai-v2.png"
                   alt="Santiago Vinoth Jeyaseelan - Professional Headshot"
-                  className="w-full h-full rounded-full object-cover scale-[1.8] object-[50%_35%]"
+                  className="w-full h-full rounded-full object-cover scale-[1.8] translate-y-[10px]"
                 />
               </div>
             </div>
