@@ -1,138 +1,164 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Briefcase, Quote } from "lucide-react";
+import { Quote } from "lucide-react";
+
+const roles = [
+  {
+    company: "Gainbridge",
+    logo: "/gainbridge.png",
+    role: "VP of Product",
+    period: "2022 - 2025",
+    description:
+      "Led product strategy and execution for the D2C & B2B2C platforms. Drove ~$X billion annual (2025) investment volume, a 30x increase in under 3 years. Built and scaled a high-performing team of XX+ members across PM, Design, Product Analytics, and Product Operations.",
+    tags: ["D2C", "Insurtech", "Scale"],
+  },
+  {
+    company: "Marqeta",
+    logo: "/marqeta.png",
+    role: "Director of Product Management",
+    period: "2019 - 2022",
+    description:
+      "Launched a new product vertical generating $XX billion in annual TPV. Optimized API performance to four-9 uptime with sub-500ms latency. Established product launch playbooks for scaling custom programs across the platform.",
+    tags: ["B2B2C", "Fintech", "0→1→Scale"],
+  },
+  {
+    company: "Bank of the West",
+    logo: null,
+    role: "Senior Consultant, Product",
+    period: "2017 - 2019",
+    description:
+      "Launched card and payments servicing features across online and mobile channels, improving UX for over 1.5M customers. Transformed the entire card servicing portfolio across consumer, SMB and commercial products. Increased user engagement by XX%.",
+    tags: ["Enterprise FI", "Payments", "D2C"],
+  },
+  {
+    company: "JP Morgan Chase",
+    logo: null,
+    role: "Consultant, Product",
+    period: "2012 - 2016",
+    description:
+      "Managed Global Treasury and Liquidity products, optimizing cash management rails like ACH, Wires, and SWIFT for enterprise clients. Streamlined settlement efficiency and liquidity reporting across complex multi-currency accounts.",
+    tags: ["Large FI", "Payments", "B2B"],
+  },
+];
+
+const testimonials = [
+  {
+    quote:
+      "Santiago's proven execution capabilities in his role as Director of Product Management at Marqeta, Inc. were critical for the company's growth and differentiation in the marketplace.",
+    author: "Jason Gardner",
+    title: "Founder & Director, Marqeta, Inc.",
+  },
+  {
+    quote:
+      "As a pioneer in the annuity industry, a niche space in the insurance world, it was extremely important for Gainbridge to stay differentiated and Santiago's contributions have been instrumental in helping us do that.",
+    author: "Justin Wee",
+    title: "President, Gainbridge",
+  },
+];
 
 const CareerHighlights = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
-  const roles = [
-    {
-      company: "Gainbridge",
-      role: "VP of Product",
-      period: "2022 - 2025",
-      achievements: [
-        "Scaled Gainbridge's direct-to-consumer business from $XX million to $XXX million in 2024, and on pace to exceed $X billion in 2025",
-        "Drove $XX million revenue run rate through innovative product features",
-        "Built and scaled the product function of XX+ members",
-      ],
-      tags: ["D2C", "Insurtech", "Scale"],
-    },
-    {
-      company: "Marqeta",
-      role: "Director of Product Management",
-      period: "2019 - 2022",
-      achievements: [
-        "Launched new product vertical with XXX million in TPV, ~XXX thousand accounts",
-        "Optimized API product performance to achieve 250-500ms SLOs for key APIs and maintain 99.99% platform uptime.",
-        "Established product launch playbooks for scaling customer programs",
-      ],
-      tags: ["B2B2C", "Fintech", "0→1→scale"],
-    },
-    {
-      company: "Bank of the West",
-      role: "Senior Consultant, Product",
-      period: "2017 - 2019",
-      achievements: [
-        "Launched card and payments servicing features via Online/Web and Mobile banking channels, improved UX for over X million+ customers",
-        "Transformed Bank of the West's entire card servicing products and features, including credit, debit, and prepaid cards across consumer, SMB, and commercial portfolios.",
-        "Increased user engagement by XX% through product improvements",
-      ],
-      tags: ["Large FI", "Retention", "D2C"],
-    },
-  ];
-
-  const testimonials = [
-    {
-      quote:
-        "Santiago's proven execution capabilities in his role as Director of Product Management at Marqeta, Inc. were critical for the company's growth and differentiation in the marketplace.",
-      author: "Jason Gardner",
-      title: "Founder & Director, Marqeta, Inc.",
-    },
-    {
-      quote:
-        "As a pioneer in the annuity industry, a niche space in the insurance world, it was extremely important for Gainbridge to stay differentiated and Santiago's contributions have been instrumental in helping us do that.",
-      author: "Justin Wee",
-      title: "President, Gainbridge",
-    },
-  ];
-
   return (
-    <section id="career" className="py-20 bg-background" ref={ref}>
-      <div className="container mx-auto px-4">
+    <section id="career" className="py-20 bg-[#111827] border-t border-[#1e293b]" ref={ref}>
+      <div className="container mx-auto px-6 md:px-8">
+        {/* Section header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12"
+          className="mb-14"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">Career Highlights</h2>
-          <div className="w-24 h-1 bg-primary mx-auto"></div>
+          <div className="flex items-center gap-3 mb-5">
+            <div className="w-10 h-[2px] bg-[#3b82f6]" />
+            <span className="text-[#94a3b8] text-xs tracking-[0.2em] uppercase font-sans">
+              CAREER HIGHLIGHTS
+            </span>
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold text-white font-heading">Where I've Built</h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-6 mb-16">
-          {roles.map((role, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-              transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
-            >
-              <Card className="h-full hover:shadow-xl transition-all hover:-translate-y-1 bg-card border-border">
-                <CardHeader>
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                    <Briefcase className="w-6 h-6 text-primary" />
+        {/* Timeline */}
+        <div className="relative">
+          {/* Vertical line — hidden on mobile */}
+          <div className="hidden md:block absolute left-[19px] top-0 bottom-0 w-px bg-[#334155]" />
+
+          <div className="space-y-8 md:space-y-10">
+            {roles.map((role, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+                transition={{ duration: 0.6, delay: 0.15 + index * 0.12 }}
+                className="relative md:pl-14"
+              >
+                {/* Timeline dot — hidden on mobile */}
+                <div className="hidden md:block absolute left-[14px] top-7 w-[11px] h-[11px] rounded-full bg-[#3b82f6] border-2 border-[#111827]" />
+
+                {/* Card */}
+                <div className="bg-[#1e293b] border border-[#334155] rounded-xl p-6 hover:border-[#3b82f6] hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[#3b82f6]/5 transition-all duration-300">
+                  <div className="flex items-start gap-4 mb-3">
+                    {role.logo && (
+                      <img
+                        src={role.logo}
+                        alt={`${role.company} logo`}
+                        className="w-10 h-10 rounded-md object-contain bg-white/10 p-1 shrink-0 mt-0.5"
+                      />
+                    )}
+                    <div>
+                      <h3 className="text-xl font-bold text-white font-heading">{role.company}</h3>
+                      <p className="text-sm text-[#94a3b8]">{role.role}</p>
+                      <p className="text-xs text-[#94a3b8] mt-0.5">{role.period}</p>
+                    </div>
                   </div>
-                  <CardTitle className="text-xl mb-2">{role.company}</CardTitle>
-                  <p className="text-sm font-semibold text-primary">{role.role}</p>
-                  <p className="text-xs text-muted-foreground">{role.period}</p>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-3 mb-4">
-                    {role.achievements.map((achievement, idx) => (
-                      <li key={idx} className="text-sm text-muted-foreground flex items-start">
-                        <span className="text-primary mr-2">•</span>
-                        <span>{achievement}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="flex flex-wrap gap-2 mt-4">
+
+                  <p className="text-[#e2e8f0] text-sm md:text-[15px] leading-relaxed mb-4">
+                    {role.description}
+                  </p>
+
+                  <div className="flex flex-wrap gap-2">
                     {role.tags.map((tag, idx) => (
                       <span
                         key={idx}
-                        className="px-3 py-1 bg-background text-muted-foreground rounded-lg text-xs font-medium"
+                        className="px-3 py-1 bg-[#334155] text-[#94a3b8] text-xs rounded-full border border-transparent hover:border-[#3b82f6] transition-colors"
                       >
                         {tag}
                       </span>
                     ))}
                   </div>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
 
+        {/* Testimonials */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="max-w-5xl mx-auto"
+          transition={{ duration: 0.6, delay: 0.8 }}
+          className="mt-20 max-w-5xl mx-auto"
         >
-          <h3 className="text-3xl font-bold text-center mb-8">What Others Say</h3>
+          <h3 className="text-2xl md:text-3xl font-bold text-white font-heading text-center mb-8">
+            What Others Say
+          </h3>
           <div className="grid md:grid-cols-2 gap-6">
-            {testimonials.map((testimonial, index) => (
-              <Card key={index} className="bg-card border-border hover:shadow-lg transition-shadow">
-                <CardContent className="pt-6">
-                  <Quote className="w-8 h-8 text-primary mb-4" />
-                  <p className="text-muted-foreground italic mb-4 text-lg">"{testimonial.quote}"</p>
-                  <div className="border-t border-border pt-4">
-                    <p className="font-semibold text-foreground">{testimonial.author}</p>
-                    <p className="text-sm text-muted-foreground">{testimonial.title}</p>
-                  </div>
-                </CardContent>
-              </Card>
+            {testimonials.map((t, index) => (
+              <div
+                key={index}
+                className="bg-[#1e293b] border border-[#334155] rounded-xl p-6 hover:shadow-lg transition-shadow"
+              >
+                <Quote className="w-7 h-7 text-[#3b82f6] mb-4" />
+                <p className="text-[#94a3b8] italic text-base leading-relaxed mb-4">
+                  "{t.quote}"
+                </p>
+                <div className="border-t border-[#334155] pt-4">
+                  <p className="font-semibold text-white text-sm">{t.author}</p>
+                  <p className="text-xs text-[#94a3b8]">{t.title}</p>
+                </div>
+              </div>
             ))}
           </div>
         </motion.div>
