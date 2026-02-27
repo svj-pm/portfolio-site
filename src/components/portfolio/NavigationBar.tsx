@@ -22,10 +22,10 @@ const NavigationBar = () => {
   };
 
   const navLinks = [
-    { id: "about", label: "About" },
     { id: "building", label: "Building" },
+    { id: "about", label: "About" },
     { id: "career", label: "Career" },
-    { id: "work", label: "Work" },
+    { id: "work", label: "Products" },
     { id: "contact", label: "Contact" },
   ];
 
