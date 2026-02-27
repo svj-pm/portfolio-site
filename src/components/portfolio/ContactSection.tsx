@@ -1,121 +1,69 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Button } from "@/components/ui/button";
-import { Mail, Linkedin, CheckCircle2 } from "lucide-react";
+import { Mail, Linkedin, Github } from "lucide-react";
 
 const ContactSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
-  const fitPoints = [
-    "Building 0→1→scale products for fintech and wealthtech",
-    "Driving P&L impact with high-performing, cross-functional teams",
-    "GM-adjacent product ownership with strategic thinking",
-    "Proven track record in D2C, B2B, and B2B2C financial products",
-  ];
-
   return (
-    <section id="contact" className="py-20 bg-background" ref={ref}>
-      <div className="container mx-auto px-4">
+    <section
+      id="contact"
+      className="py-24 border-t border-[#1e293b]"
+      style={{ background: "linear-gradient(180deg, #0f172a 0%, #111827 100%)" }}
+      ref={ref}
+    >
+      <div className="container mx-auto px-6 md:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12"
+          className="text-center"
         >
-          <h2 className="text-4xl md:text-6xl font-bold mb-4">
-            Let's Build Something Great Together
+          <h2 className="text-4xl md:text-[40px] font-bold text-white font-heading mb-6">
+            Let's Build Something Together
           </h2>
-          <div className="w-24 h-1 bg-primary mx-auto"></div>
-        </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="max-w-4xl mx-auto"
-        >
-          <div className="bg-card border border-border rounded-2xl p-8 md:p-12 mb-8">
-            <h3 className="text-2xl md:text-3xl font-bold mb-6 text-center">
-              Looking for a D2C Product Leader?
-            </h3>
-            <p className="text-lg text-muted-foreground text-center mb-8">
-              I excel at building 0→1→scale products for fintech and wealthtech, driving P&L impact with
-              high-performing teams.
-            </p>
+          <p className="text-[#e2e8f0] text-base md:text-[17px] leading-relaxed max-w-[600px] mx-auto mb-8">
+            I'm a product leader who builds — with teams, with strategy, and now directly with AI. If you're looking for someone who combines enterprise product leadership with hands-on AI fluency, let's talk.
+          </p>
 
-            <div className="grid md:grid-cols-2 gap-4 mb-8">
-              {fitPoints.map((point, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
-                  transition={{ duration: 0.4, delay: 0.4 + index * 0.1 }}
-                  className="flex items-start gap-3"
-                >
-                  <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                  <p className="text-foreground">{point}</p>
-                </motion.div>
-              ))}
-            </div>
+          <p className="text-[#94a3b8] text-sm md:text-[15px] leading-relaxed max-w-[640px] mx-auto mb-6">
+            15+ years building 0→1→scale products · GM-adjacent P&L ownership · Hands-on AI agent development · High-performing cross-functional teams
+          </p>
 
-            <div className="bg-background border border-border rounded-lg p-6 mb-8">
-              <p className="text-center text-foreground font-medium text-lg">
-                <span className="text-primary font-bold">Ideal for:</span> Companies seeking GM-adjacent product
-                ownership with proven track record in D2C fintechs, wealthtechs, and enterprise financial products
-              </p>
-            </div>
+          <p className="text-[#94a3b8] text-sm italic max-w-[600px] mx-auto mb-10">
+            Ideal for companies building AI-powered products, enterprise platforms, or anyone who wants a product leader who understands what the engineering team is actually building.
+          </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="text-lg px-8">
-                <a
-                  href="mailto:san.vinodh@gmail.com"
-                  className="flex items-center justify-center gap-3"
-                >
-                  <Mail className="w-5 h-5" />
-                  Email Me
-                </a>
-              </Button>
-
-              <Button asChild size="lg" variant="outline" className="text-lg px-8">
-                <a
-                  href="https://www.linkedin.com/in/santiago-v-jeyaseelan/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-3"
-                >
-                  <Linkedin className="w-5 h-5" />
-                  Connect on LinkedIn
-                </a>
-              </Button>
-            </div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="mailto:san.vinodh@gmail.com"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#3b82f6] text-white text-sm font-medium rounded-lg hover:bg-[#2563eb] transition-colors"
+            >
+              <Mail className="w-4 h-4" />
+              Email Me
+            </a>
+            <a
+              href="https://www.linkedin.com/in/santiago-v-jeyaseelan/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-[#3b82f6] text-[#3b82f6] text-sm font-medium rounded-lg hover:bg-[#3b82f6]/10 transition-colors"
+            >
+              <Linkedin className="w-4 h-4" />
+              Connect on LinkedIn
+            </a>
+            <a
+              href="https://github.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-[#3b82f6] text-[#3b82f6] text-sm font-medium rounded-lg hover:bg-[#3b82f6]/10 transition-colors"
+            >
+              <Github className="w-4 h-4" />
+              View GitHub
+            </a>
           </div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
-            className="text-center text-muted-foreground"
-          >
-            <p className="text-sm">
-              Email:{" "}
-              <a href="mailto:san.vinodh@gmail.com" className="text-primary hover:text-primary-hover font-medium">
-                san.vinodh@gmail.com
-              </a>
-            </p>
-            <p className="text-sm mt-2">
-              LinkedIn:{" "}
-              <a
-                href="https://www.linkedin.com/in/santiago-v-jeyaseelan/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-primary hover:text-primary-hover font-medium"
-              >
-                Santiago V Jeyaseelan
-              </a>
-            </p>
-          </motion.div>
         </motion.div>
       </div>
     </section>
