@@ -10,7 +10,7 @@ const ContactSection = () => {
   return (
     <section
       id="contact"
-      className="py-24 border-t border-[#1e293b]"
+      className="py-16 md:py-24 border-t border-[#1e293b]"
       style={{ background: "linear-gradient(180deg, #0f172a 0%, #111827 100%)" }}
       ref={ref}
     >
