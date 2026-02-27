@@ -75,7 +75,7 @@ const HeroSection = () => {
             href="https://github.com/svj-pm"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#94a3b8] hover:text-[#3b82f6] transition-colors"
+            className="!text-[#94a3b8] hover:!text-[#3b82f6] transition-colors"
             aria-label="GitHub"
           >
             <Github size={22} />
