@@ -53,7 +53,7 @@ const NavigationBar = () => {
                 </button>
               ))}
               <a
-                href="https://github.com/"
+                href="https://github.com/svj-pm"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-white transition-colors"
