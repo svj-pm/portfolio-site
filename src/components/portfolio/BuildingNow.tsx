@@ -13,7 +13,7 @@ const BuildingNow = () => {
       description:
         "Ingests 15-30 research documents and generates targeted interview preparation materials in under 30 minutes. Includes interactive gap analysis, cost-optimized API usage, and role-agnostic architecture.",
       tags: ["Python", "Claude API", "Document AI"],
-      link: "#",
+      link: "https://github.com/svj-pm/interview-prep-agent",
     },
     {
       icon: "🛍️",
@@ -21,7 +21,7 @@ const BuildingNow = () => {
       description:
         "Autonomous agent framework for content generation, audience targeting, and campaign optimization. Powering a real D2C brand bringing cotton essentials from Indian artisans to US families.",
       tags: ["Python", "Agent Architecture", "E-Commerce"],
-      link: "#",
+      link: "https://github.com/svj-pm/ecomm-marketing-agents",
     },
     {
       icon: "🏢",
@@ -42,12 +42,8 @@ const BuildingNow = () => {
           transition={{ duration: 0.6 }}
           className="mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-bold font-heading text-foreground mb-3">
-            What I'm Building Now
-          </h2>
-          <p className="text-lg text-[#94a3b8]">
-            AI agent systems that solve problems I actually have.
-          </p>
+          <h2 className="text-4xl md:text-5xl font-bold font-heading text-foreground mb-3">What I'm Building Now</h2>
+          <p className="text-lg text-[#94a3b8]">AI agent systems that solve problems I actually have.</p>
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-6 max-w-6xl">
@@ -60,26 +56,17 @@ const BuildingNow = () => {
               className="bg-[#1e293b] border border-[#334155] rounded-xl p-6 hover:border-[#3b82f6] hover:-translate-y-1 hover:shadow-lg transition-all duration-300 flex flex-col"
             >
               <span className="text-2xl mb-3">{project.icon}</span>
-              <h3 className="text-lg font-bold text-foreground mb-2">
-                {project.name}
-              </h3>
-              <p className="text-sm text-[#e2e8f0] mb-4 flex-1">
-                {project.description}
-              </p>
+              <h3 className="text-lg font-bold text-foreground mb-2">{project.name}</h3>
+              <p className="text-sm text-[#e2e8f0] mb-4 flex-1">{project.description}</p>
               <div className="flex flex-wrap gap-2 mb-4">
                 {project.tags.map((tag, idx) => (
-                  <span
-                    key={idx}
-                    className="px-3 py-1 bg-[#334155] text-[#94a3b8] rounded-full text-xs font-medium"
-                  >
+                  <span key={idx} className="px-3 py-1 bg-[#334155] text-[#94a3b8] rounded-full text-xs font-medium">
                     {tag}
                   </span>
                 ))}
               </div>
               {project.comingSoon ? (
-                <span className="text-sm text-[#94a3b8] opacity-50">
-                  Coming Soon
-                </span>
+                <span className="text-sm text-[#94a3b8] opacity-50">Coming Soon</span>
               ) : (
                 <a
                   href={project.link}
