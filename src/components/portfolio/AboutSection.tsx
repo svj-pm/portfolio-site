@@ -1,104 +1,79 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { TrendingUp, Users, Rocket, Target } from "lucide-react";
+import { Linkedin, Github, Mail } from "lucide-react";
+
+const skills = [
+  "Product Strategy", "0→1→Scale", "P&L Ownership", "Team Leadership",
+  "AI Agent Systems", "LLM Applications", "Fintech", "Enterprise Software",
+  "B2B", "B2B2C", "D2C", "API Platforms",
+];
 
 const AboutSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
-  const stats = [
-    { icon: TrendingUp, label: "$XXXM Growth" },
-    { icon: Users, label: "High-Performing Teams" },
-    { icon: Rocket, label: "0→1→Scale Products" },
-    { icon: Target, label: "D2C, B2B, B2B2C" },
-  ];
-
   return (
-    <section id="about" className="py-20 bg-background" ref={ref}>
-      <div className="container mx-auto px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-12"
-        >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">Product Leader Who Builds</h2>
-          <div className="w-24 h-1 bg-primary mx-auto"></div>
-        </motion.div>
+    <section id="about" className="py-20 bg-[#111827] border-t border-[#1e293b]" ref={ref}>
+      <div className="container mx-auto px-6 md:px-8">
+        <div className="flex flex-col md:flex-row gap-12 md:gap-16 items-center md:items-start">
+          {/* Left column — photo + social links */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+            transition={{ duration: 0.6 }}
+            className="flex flex-col items-center md:w-[40%] shrink-0"
+          >
+            <div className="w-[250px] h-[250px] md:w-[300px] md:h-[300px] rounded-full overflow-hidden border-2 border-[#334155]">
+              <img
+                src="/headshot-ai-v2.png"
+                alt="Santiago Vinoth Jeyaseelan"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="flex items-center gap-5 mt-6">
+              <a href="https://www.linkedin.com/in/santiago-v-jeyaseelan/" target="_blank" rel="noopener noreferrer" className="text-[#94a3b8] hover:text-[#3b82f6] transition-colors" aria-label="LinkedIn"><Linkedin size={22} /></a>
+              <a href="https://github.com/svj-pm" target="_blank" rel="noopener noreferrer" className="text-[#94a3b8] hover:text-[#3b82f6] transition-colors" aria-label="GitHub"><Github size={22} /></a>
+              <a href="mailto:san.vinodh@gmail.com" className="text-[#94a3b8] hover:text-[#3b82f6] transition-colors" aria-label="Email"><Mail size={22} /></a>
+            </div>
+          </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="max-w-4xl mx-auto"
-        >
-          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed text-center mb-12">
-            I've spent 15+ years building and scaling products across fintech, insurtech, and enterprise financial
-            services — from consumer-facing platforms to B2B infrastructure to card issuing APIs. Led{" "}
-            <span className="text-primary font-semibold">$XXXM growth</span>, launched new product verticals, and built
-            cross-functional teams across PM, Design, Product Analytics, and Product Operations. Built, grew, and
-            retained high-performing teams across PM, Design, Analytics, & Product Operations.
-          </p>
+          {/* Right column — text content */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="md:w-[60%]"
+          >
+            {/* Label */}
+            <div className="flex items-center gap-3 mb-5">
+              <div className="w-10 h-[2px] bg-[#3b82f6]" />
+              <span className="text-[#94a3b8] text-xs tracking-[0.2em] uppercase font-sans">ABOUT</span>
+            </div>
 
-          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed text-center">
-            Now I'm building with AI. I develop agent systems that solve real problems: automating complex research
-            workflows, powering e-commerce marketing for a direct-to-consumer brand, and prototyping how AI can
-            transform enterprise operations. I believe product leaders who can't work directly with AI will struggle to
-            lead AI-powered teams effectively. So I build.
-          </p>
-        </motion.div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white font-heading mb-6">Product Leader Who Builds</h2>
 
-        {/* Stats Grid */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16"
-        >
-          {stats.map((stat, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
-              transition={{ duration: 0.4, delay: 0.5 + index * 0.1 }}
-              className="bg-card border border-border rounded-lg p-6 text-center"
-            >
-              <stat.icon className="w-12 h-12 mx-auto mb-3 text-primary" />
-              <p className="text-sm font-medium text-foreground">{stat.label}</p>
-            </motion.div>
-          ))}
-        </motion.div>
+            <p className="text-[#e2e8f0] text-base md:text-lg leading-relaxed mb-5">
+              I have spent 15+ years building and scaling products across fintech, insurtech, and enterprise financial services — from consumer-facing platforms to B2B infrastructure to card issuing APIs. Led <span className="text-[#3b82f6] font-semibold">$XXXM in growth</span>, launched new product verticals, and built cross-functional teams across PM, Design, Product Analytics, and Product Operations.
+            </p>
 
-        {/* Skills Pills */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          className="flex flex-wrap justify-center gap-3 mt-12"
-        >
-          {[
-            "Product Strategy",
-            "0→1→Scale",
-            "P&L Ownership",
-            "Team Leadership",
-            "AI Agent Systems",
-            "LLM Applications",
-            "Fintech",
-            "Enterprise Software",
-            "B2B",
-            "B2B2C",
-            "DTC",
-            "API Platforms",
-          ].map((skill, index) => (
-            <span
-              key={index}
-              className="px-4 py-2 bg-card text-foreground border border-border rounded-lg text-sm font-medium hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors"
-            >
-              {skill}
-            </span>
-          ))}
-        </motion.div>
+            <p className="text-[#e2e8f0] text-base md:text-lg leading-relaxed mb-8">
+              Now I am building with AI. I develop agent systems that solve real-world problems: automating complex research workflows, powering e-commerce marketing for a direct-to-consumer brand, and prototyping how AI can transform enterprise operations. I believe product leaders who cannot work directly with AI will struggle to lead AI-powered teams effectively.
+            </p>
+
+            {/* Skill tags */}
+            <div className="flex flex-wrap gap-2">
+              {skills.map((skill, i) => (
+                <span
+                  key={i}
+                  className="px-3 py-1.5 bg-[#334155] text-[#94a3b8] text-sm rounded-full border border-transparent hover:border-[#3b82f6] transition-colors cursor-default"
+                >
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </motion.div>
+        </div>
       </div>
     </section>
   );
