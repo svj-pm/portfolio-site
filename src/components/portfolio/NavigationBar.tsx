@@ -47,7 +47,7 @@ const NavigationBar = () => {
                 <button
                   key={link.id}
                   onClick={() => scrollToSection(link.id)}
-                  className="text-sm text-muted-foreground hover:text-white transition-colors"
+                  className="text-sm text-muted-foreground hover:text-white transition-colors no-underline"
                 >
                   {link.label}
                 </button>
