@@ -31,15 +31,24 @@ const NavigationBar = () => {
 
   return (
     <>
-      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-background/80 backdrop-blur-md" : "bg-background/60 backdrop-blur-sm"}`}>
+      <nav
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-background/80 backdrop-blur-md" : "bg-background/60 backdrop-blur-sm"}`}
+      >
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">
-            <button onClick={() => scrollToSection("hero")} className="text-base font-medium text-white font-heading hover:opacity-80 transition-opacity">
-              Santiago V. Jeyaseelan
+            <button
+              onClick={() => scrollToSection("hero")}
+              className="text-base font-medium text-white font-heading hover:opacity-80 transition-opacity"
+            >
+              SVJ
             </button>
             <div className="hidden md:flex items-center gap-8">
               {navLinks.map((link) => (
-                <button key={link.id} onClick={() => scrollToSection(link.id)} className="text-sm text-muted-foreground hover:text-white transition-colors">
+                <button
+                  key={link.id}
+                  onClick={() => scrollToSection(link.id)}
+                  className="text-sm text-muted-foreground hover:text-white transition-colors"
+                >
                   {link.label}
                 </button>
               ))}
@@ -53,7 +62,11 @@ const NavigationBar = () => {
                 <Github size={18} />
               </a>
             </div>
-            <button className="md:hidden p-2 text-muted-foreground hover:text-white transition-colors" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} aria-label="Toggle menu">
+            <button
+              className="md:hidden p-2 text-muted-foreground hover:text-white transition-colors"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label="Toggle menu"
+            >
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
@@ -61,11 +74,18 @@ const NavigationBar = () => {
       </nav>
       {isMobileMenuOpen && (
         <div className="fixed inset-0 z-40 md:hidden">
-          <div className="absolute inset-0 bg-background/95 backdrop-blur-md" onClick={() => setIsMobileMenuOpen(false)} />
+          <div
+            className="absolute inset-0 bg-background/95 backdrop-blur-md"
+            onClick={() => setIsMobileMenuOpen(false)}
+          />
           <div className="relative h-full flex items-center justify-center">
             <div className="flex flex-col gap-8 text-center">
               {navLinks.map((link) => (
-                <button key={link.id} onClick={() => scrollToSection(link.id)} className="text-2xl font-medium text-muted-foreground hover:text-white transition-colors">
+                <button
+                  key={link.id}
+                  onClick={() => scrollToSection(link.id)}
+                  className="text-2xl font-medium text-muted-foreground hover:text-white transition-colors"
+                >
                   {link.label}
                 </button>
               ))}

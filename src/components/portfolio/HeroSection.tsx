@@ -20,9 +20,7 @@ const HeroSection = () => {
           className="flex items-center gap-3 mb-6"
         >
           <div className="w-10 h-[2px] bg-[#3b82f6]" />
-          <span className="text-[#94a3b8] text-xs tracking-[0.2em] uppercase font-sans">
-            VP OF PRODUCT
-          </span>
+          <span className="text-[#94a3b8] text-xs tracking-[0.2em] uppercase font-sans">VP OF PRODUCT</span>
         </motion.div>
 
         {/* Name */}
@@ -52,7 +50,9 @@ const HeroSection = () => {
           transition={{ delay: 0.35, duration: 0.6 }}
           className="text-base md:text-lg text-[#e2e8f0] leading-relaxed max-w-[600px] mb-10"
         >
-          I build AI agent systems that solve real problems — not demos. 15+ years leading product at Gainbridge, Marqeta, and Bank of the West. Now building directly with AI because product leaders who can't work with the technology will struggle to lead teams that build with it.
+          I build AI agent systems that solve real problems. 15+ years leading product at Gainbridge, Marqeta, JP Morgan
+          Chase, & Bank of the West. Now building directly with AI because product leaders who can't work with the
+          technology will struggle to lead teams that build with it.
         </motion.p>
 
         {/* Icon links */}
