@@ -1,132 +1,78 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { ExternalLink, FileText } from "lucide-react";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
+import { ArrowUpRight } from "lucide-react";
+
+const publications = [
+  {
+    title: "Redefining Retirement: The Impact of Fully Digitized Annuities in the Age of AI and Blockchain",
+    badge: "Forbes Tech Council",
+    description:
+      "Exploring how digital transformation, AI, and blockchain technology are revolutionizing retirement products and making annuities accessible to a new generation of investors.",
+    link: "https://www.forbes.com/councils/forbestechcouncil/2024/06/24/redefining-retirement-the-impact-of-fully-digitized-annuities-in-the-age-of-ai-and-blockchain/",
+  },
+];
 
 const Publications = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
-  const publications = [
-    {
-      title: "Redefining Retirement: The Impact of Fully Digitized Annuities in the Age of AI and Blockchain",
-      publication: "Forbes Tech Council",
-      date: "June 2024",
-      excerpt:
-        "Exploring how digital transformation, AI, and blockchain technology are revolutionizing retirement products and making annuities accessible to a new generation of investors.",
-      link: "https://www.forbes.com/councils/forbestechcouncil/2024/06/24/redefining-retirement-the-impact-of-fully-digitized-annuities-in-the-age-of-ai-and-blockchain/",
-    },
-    {
-      title: "Wealth Creation Could Be the Next Big Thing",
-      publication: "Truptinatu Substack",
-      date: "2024",
-      excerpt:
-        "An in-depth analysis of emerging trends in wealth creation, exploring how technology and innovative financial products are democratizing wealth building opportunities.",
-      link: "https://truptinatu.substack.com/p/wealth-creation-could-be-the-next",
-    },
-    {
-      title: "Why Niche Financial Services Could Be The Next Embedded Finance Trend",
-      publication: "Forbes Tech Council",
-      date: "May 2023",
-      excerpt:
-        "Examining how specialized financial services are emerging as the next wave of embedded finance, enabling businesses to offer tailored solutions to niche markets and underserved segments.",
-      link: "https://www.forbes.com/councils/forbestechcouncil/2023/05/31/why-niche-financial-services-could-be-the-next-embedded-finance-trend/",
-    },
-  ];
-
   return (
-    <section id="publications" className="py-20 bg-background" ref={ref}>
-      <div className="container mx-auto px-4">
+    <section id="publications" className="py-20 bg-[#111827] border-t border-[#1e293b]" ref={ref}>
+      <div className="container mx-auto px-6 md:px-8">
+        {/* Section header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12"
+          className="mb-14"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Publications & Thought Leadership
-          </h2>
-          <div className="w-24 h-1 bg-primary mx-auto mb-4"></div>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Sharing insights on product strategy, fintech innovation, and the future of financial services
-          </p>
+          <div className="flex items-center gap-3 mb-5">
+            <div className="w-10 h-[2px] bg-[#3b82f6]" />
+            <span className="text-[#94a3b8] text-xs tracking-[0.2em] uppercase font-sans">WRITING</span>
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold text-white font-heading">Publications & Thought Leadership</h2>
         </motion.div>
 
-        <Carousel
-          opts={{
-            align: "start",
-            loop: true,
-          }}
-          className="max-w-6xl mx-auto"
-        >
-          <CarouselContent>
-            {publications.map((pub, index) => (
-              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/2">
-                <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-                  transition={{ duration: 0.6, delay: 0.2 + index * 0.2 }}
-                  className="h-full"
-                >
-                  <Card className="h-full hover:shadow-xl transition-all hover:-translate-y-2 overflow-hidden group bg-card border-border">
-                    {/* Thumbnail */}
-                    <div className="h-40 bg-card border-b border-border relative overflow-hidden flex items-center justify-center">
-                      <FileText className="w-16 h-16 text-muted-foreground/20 group-hover:scale-110 transition-transform" />
-                      <div className="absolute top-4 right-4">
-                        <div className="bg-primary text-primary-foreground px-3 py-1 rounded-lg">
-                          <p className="text-xs font-semibold">{pub.date}</p>
-                        </div>
-                      </div>
-                    </div>
+        {/* Publication cards */}
+        <div className="space-y-6 max-w-4xl">
+          {publications.map((pub, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+              transition={{ duration: 0.6, delay: 0.15 }}
+              className="bg-[#1e293b] border border-[#334155] rounded-xl p-6 md:p-8 hover:border-[#3b82f6] hover:shadow-lg hover:shadow-[#3b82f6]/5 transition-all duration-300"
+            >
+              <div className="flex flex-col md:flex-row md:items-start gap-5">
+                {/* Badge */}
+                <div className="shrink-0">
+                  <span className="inline-block px-4 py-2 bg-[#0f172a] border border-[#334155] rounded-lg text-[#3b82f6] text-xs font-bold tracking-wide uppercase">
+                    Forbes Tech Council
+                  </span>
+                </div>
 
-                    <CardHeader>
-                      <div className="text-sm font-semibold text-primary mb-2">
-                        {pub.publication}
-                      </div>
-                      <CardTitle className="text-xl leading-tight">
-                        {pub.title}
-                      </CardTitle>
-                    </CardHeader>
-
-                    <CardContent>
-                      <p className="text-muted-foreground mb-6 leading-relaxed">
-                        {pub.excerpt}
-                      </p>
-
-                      <Button
-                        asChild
-                        variant="outline"
-                        className="w-full"
-                        size="lg"
-                      >
-                        <a
-                          href={pub.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex items-center justify-center gap-2"
-                        >
-                          Read Article
-                          <ExternalLink className="w-4 h-4" />
-                        </a>
-                      </Button>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious className="hidden md:flex" />
-          <CarouselNext className="hidden md:flex" />
-        </Carousel>
+                {/* Content */}
+                <div className="flex-1">
+                  <h3 className="text-lg md:text-xl font-bold text-white font-heading mb-3 leading-snug">
+                    {pub.title}
+                  </h3>
+                  <p className="text-[#e2e8f0] text-sm md:text-[15px] leading-relaxed mb-4">
+                    {pub.description}
+                  </p>
+                  <a
+                    href={pub.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 text-[#3b82f6] text-sm font-medium hover:underline"
+                  >
+                    Read Article <ArrowUpRight className="w-4 h-4" />
+                  </a>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );
