@@ -21,20 +21,21 @@ const ContactSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center"
         >
-          <h2 className="text-4xl md:text-[40px] font-bold text-white font-heading mb-6">
-            Let's Build Something Together
-          </h2>
+          <h2 className="text-4xl md:text-[40px] font-bold text-white font-heading mb-6">Let's Build Together</h2>
 
           <p className="text-[#e2e8f0] text-base md:text-[17px] leading-relaxed max-w-[600px] mx-auto mb-8">
-            I'm a product leader who builds — with teams, with strategy, and now directly with AI. If you're looking for someone who combines enterprise product leadership with hands-on AI fluency, let's talk.
+            I'm a product leader who builds — with teams, with strategy, and now directly with AI. If you're looking for
+            someone who combines enterprise product leadership with hands-on AI fluency, let's talk.
           </p>
 
           <p className="text-[#94a3b8] text-sm md:text-[15px] leading-relaxed max-w-[640px] mx-auto mb-6">
-            15+ years building 0→1→scale products · GM-adjacent P&L ownership · Hands-on AI agent development · High-performing cross-functional teams
+            15+ years building 0→1→scale products · GM-adjacent P&L ownership · Hands-on AI agent development ·
+            High-performing cross-functional teams
           </p>
 
           <p className="text-[#94a3b8] text-sm italic max-w-[600px] mx-auto mb-10">
-            Ideal for companies building AI-powered products, enterprise platforms, or anyone who wants a product leader who understands what the engineering team is actually building.
+            Ideal for companies building AI-powered products, enterprise platforms, or anyone who wants a product leader
+            who understands what the engineering team is actually building.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
