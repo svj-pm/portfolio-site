@@ -50,9 +50,9 @@ const HeroSection = () => {
           transition={{ delay: 0.35, duration: 0.6 }}
           className="text-base md:text-lg text-[#e2e8f0] leading-relaxed max-w-[600px] mb-10"
         >
-          I build AI agent systems that solve real problems. 15+ years leading product at Gainbridge, Marqeta, JP Morgan
-          Chase, & Bank of the West. Now building directly with AI because product leaders who can't work with the
-          technology will struggle to lead teams that build with it.
+          I build AI agent systems that solve real-world problems. 15+ years building and scaling products at
+          Gainbridge, Marqeta, JP Morgan Chase, & Bank of the West. Now building directly with AI because product
+          leaders who can't work with the technology will struggle to lead teams that do.
         </motion.p>
 
         {/* Icon links */}
@@ -72,7 +72,7 @@ const HeroSection = () => {
             <Linkedin size={22} />
           </a>
           <a
-            href="https://github.com/"
+            href="https://github.com/svj-pm"
             target="_blank"
             rel="noopener noreferrer"
             className="text-[#94a3b8] hover:text-[#3b82f6] transition-colors"
