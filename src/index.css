@@ -69,11 +69,18 @@
   }
 
   a {
+    text-decoration: none;
+  }
+
+  /* Accent links get the blue treatment */
+  a[href^="http"],
+  a[href^="mailto"] {
     color: hsl(217 91% 60%);
     transition: color 0.2s;
   }
 
-  a:hover {
+  a[href^="http"]:hover,
+  a[href^="mailto"]:hover {
     color: hsl(217 92% 69%);
   }
 }

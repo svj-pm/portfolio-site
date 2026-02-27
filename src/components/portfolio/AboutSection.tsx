@@ -57,7 +57,7 @@ const AboutSection = () => {
               </a>
               <a
                 href="mailto:san.vinodh@gmail.com"
-                className="text-[#94a3b8] hover:text-[#3b82f6] transition-colors"
+                className="!text-[#94a3b8] hover:!text-[#3b82f6] transition-colors"
                 aria-label="Email"
               >
                 <Mail size={22} />
