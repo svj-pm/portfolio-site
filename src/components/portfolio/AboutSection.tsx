@@ -34,7 +34,8 @@ const AboutSection = () => {
           className="max-w-4xl mx-auto"
         >
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed text-center mb-12">
-            Product leader with GM‑adjacent ownership building and scaling D2C, B2B, and B2B2C products. Led{" "}
+            I've spent 15+ years building and scaling products across fintech, insurtech, and enterprise financial
+            services — from consumer-facing platforms to B2B infrastructure to card issuing APIs. Led{" "}
             <span className="text-accent font-semibold">$XXXM growth</span> and launched products and new verticals for
             fintech, insurtech, and large financial institutions. Built, grew, and retained high-performing teams across
             PM, Design, Analytics, & Product Operations.
