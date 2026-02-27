@@ -28,9 +28,9 @@ const AboutSection = () => {
         <div className="flex flex-col md:flex-row gap-12 md:gap-16 items-center md:items-start">
           {/* Left column — photo + social links */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+            transition={{ duration: 0.4 }}
             className="flex flex-col items-center md:w-[40%] shrink-0"
           >
             <div className="w-[250px] h-[250px] md:w-[300px] md:h-[300px] rounded-full overflow-hidden border-2 border-[#334155]">
