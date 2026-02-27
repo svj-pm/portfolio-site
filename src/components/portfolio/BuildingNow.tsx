@@ -34,12 +34,12 @@ const BuildingNow = () => {
   ];
 
   return (
-    <section id="building" className="py-20 bg-background" ref={ref}>
-      <div className="container mx-auto px-4">
+    <section id="building" className="py-16 md:py-24 bg-background" ref={ref}>
+      <div className="container mx-auto px-6 md:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.6 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.4 }}
           className="mb-12"
         >
           <h2 className="text-4xl md:text-5xl font-bold font-heading text-foreground mb-3">What I'm Building Now</h2>
@@ -50,9 +50,9 @@ const BuildingNow = () => {
           {projects.map((project, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-              transition={{ duration: 0.6, delay: 0.2 + index * 0.15 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+              transition={{ duration: 0.4, delay: 0.1 + index * 0.1 }}
               className="bg-[#1e293b] border border-[#334155] rounded-xl p-6 hover:border-[#3b82f6] hover:-translate-y-1 hover:shadow-lg transition-all duration-300 flex flex-col"
             >
               <span className="text-2xl mb-3">{project.icon}</span>

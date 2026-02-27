@@ -23,14 +23,14 @@ const AboutSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="about" className="py-20 bg-[#111827] border-t border-[#1e293b]" ref={ref}>
+    <section id="about" className="py-16 md:py-24 bg-[#111827] border-t border-[#1e293b]" ref={ref}>
       <div className="container mx-auto px-6 md:px-8">
         <div className="flex flex-col md:flex-row gap-12 md:gap-16 items-center md:items-start">
           {/* Left column — photo + social links */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+            transition={{ duration: 0.4 }}
             className="flex flex-col items-center md:w-[40%] shrink-0"
           >
             <div className="w-[250px] h-[250px] md:w-[300px] md:h-[300px] rounded-full overflow-hidden border-2 border-[#334155]">
@@ -41,7 +41,7 @@ const AboutSection = () => {
                 href="https://www.linkedin.com/in/santiago-v-jeyaseelan/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#94a3b8] hover:text-[#3b82f6] transition-colors"
+                className="!text-[#94a3b8] hover:!text-[#3b82f6] transition-colors"
                 aria-label="LinkedIn"
               >
                 <Linkedin size={22} />
@@ -50,14 +50,14 @@ const AboutSection = () => {
                 href="https://github.com/svj-pm"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#94a3b8] hover:text-[#3b82f6] transition-colors"
+                className="!text-[#94a3b8] hover:!text-[#3b82f6] transition-colors"
                 aria-label="GitHub"
               >
                 <Github size={22} />
               </a>
               <a
                 href="mailto:san.vinodh@gmail.com"
-                className="text-[#94a3b8] hover:text-[#3b82f6] transition-colors"
+                className="!text-[#94a3b8] hover:!text-[#3b82f6] transition-colors"
                 aria-label="Email"
               >
                 <Mail size={22} />
@@ -67,9 +67,9 @@ const AboutSection = () => {
 
           {/* Right column — text content */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+            transition={{ duration: 0.4, delay: 0.15 }}
             className="md:w-[60%]"
           >
             {/* Label */}

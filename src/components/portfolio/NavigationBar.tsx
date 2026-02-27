@@ -47,7 +47,7 @@ const NavigationBar = () => {
                 <button
                   key={link.id}
                   onClick={() => scrollToSection(link.id)}
-                  className="text-sm text-muted-foreground hover:text-white transition-colors"
+                  className="text-sm text-muted-foreground hover:text-white transition-colors no-underline"
                 >
                   {link.label}
                 </button>
@@ -56,7 +56,7 @@ const NavigationBar = () => {
                 href="https://github.com/svj-pm"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-white transition-colors"
+                className="text-muted-foreground hover:text-white transition-colors no-underline"
                 aria-label="GitHub"
               >
                 <Github size={18} />
