@@ -1,87 +1,38 @@
-import { Mail, Linkedin } from "lucide-react";
+import { Mail, Linkedin, Github } from "lucide-react";
 
 const Footer = () => {
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
-  const navLinks = [
-    { id: "about", label: "About" },
-    { id: "career", label: "Career Highlights" },
-    { id: "work", label: "Work Products" },
-    { id: "publications", label: "Publications" },
-    { id: "contact", label: "Contact" },
-  ];
-
   return (
-    <footer className="border-t border-border py-16 bg-card">
-      <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-3 gap-12 mb-12">
-          {/* Brand */}
-          <div>
-            <h3 className="text-2xl font-bold mb-3">
-              Santiago Vinoth Jeyaseelan
-            </h3>
-            <p className="text-muted-foreground">
-              VP of Product | D2C Product Leader
-            </p>
-          </div>
+    <footer className="py-12" style={{ background: "#0f172a" }}>
+      <div className="container mx-auto px-4 text-center">
+        <p className="text-sm mb-6" style={{ color: "#94a3b8" }}>
+          Santiago Vinoth Jeyaseelan · VP of Product · AI Builder
+        </p>
 
-          {/* Quick Links */}
-          <div>
-            <h4 className="font-semibold text-foreground mb-6 text-lg">Quick Links</h4>
-            <div className="flex flex-col gap-3">
-              {navLinks.map((link) => (
-                <button
-                  key={link.id}
-                  onClick={() => scrollToSection(link.id)}
-                  className="text-sm text-muted-foreground hover:text-primary transition-colors text-left"
-                >
-                  {link.label}
-                </button>
-              ))}
-            </div>
-          </div>
-
-          {/* Contact */}
-          <div>
-            <h4 className="font-semibold text-foreground mb-6 text-lg">Connect</h4>
-            <div className="flex gap-4 mb-6">
-              <a
-                href="mailto:san.vinodh@gmail.com"
-                className="w-12 h-12 rounded-full bg-background border border-border flex items-center justify-center hover:border-primary transition-colors"
-                aria-label="Email"
-              >
-                <Mail size={20} className="text-foreground" />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/santiago-v-jeyaseelan/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-12 h-12 rounded-full bg-background border border-border flex items-center justify-center hover:border-primary transition-colors"
-                aria-label="LinkedIn"
-              >
-                <Linkedin size={20} className="text-foreground" />
-              </a>
-            </div>
-            <a 
-              href="mailto:san.vinodh@gmail.com"
-              className="text-sm text-muted-foreground hover:text-primary transition-colors"
+        <div className="flex justify-center gap-5 mb-6">
+          {[
+            { href: "mailto:san.vinodh@gmail.com", icon: Mail, label: "Email" },
+            { href: "https://www.linkedin.com/in/santiago-v-jeyaseelan/", icon: Linkedin, label: "LinkedIn" },
+            { href: "https://github.com/", icon: Github, label: "GitHub" },
+          ].map(({ href, icon: Icon, label }) => (
+            <a
+              key={label}
+              href={href}
+              target={label !== "Email" ? "_blank" : undefined}
+              rel={label !== "Email" ? "noopener noreferrer" : undefined}
+              className="transition-colors"
+              style={{ color: "#94a3b8" }}
+              aria-label={label}
+              onMouseEnter={(e) => (e.currentTarget.style.color = "#3b82f6")}
+              onMouseLeave={(e) => (e.currentTarget.style.color = "#94a3b8")}
             >
-              san.vinodh@gmail.com
+              <Icon size={18} />
             </a>
-          </div>
+          ))}
         </div>
 
-        {/* Copyright */}
-        <div className="border-t border-border pt-8 text-center">
-          <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Santiago Vinoth Jeyaseelan. All rights reserved.
-          </p>
-        </div>
+        <p className="text-xs" style={{ color: "#64748b" }}>
+          © {new Date().getFullYear()} Santiago Vinoth Jeyaseelan
+        </p>
       </div>
     </footer>
   );
