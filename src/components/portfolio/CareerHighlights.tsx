@@ -99,19 +99,10 @@ const CareerHighlights = () => {
 
                 {/* Card */}
                 <div className="bg-[#1e293b] border border-[#334155] rounded-xl p-6 hover:border-[#3b82f6] hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[#3b82f6]/5 transition-all duration-300">
-                  <div className="flex items-start gap-4 mb-3">
-                    {role.logo && (
-                      <img
-                        src={role.logo}
-                        alt={`${role.company} logo`}
-                        className="w-10 h-10 rounded-md object-contain bg-white/10 p-1 shrink-0 mt-0.5"
-                      />
-                    )}
-                    <div>
-                      <h3 className="text-xl font-bold text-white font-heading">{role.company}</h3>
-                      <p className="text-sm text-[#94a3b8]">{role.role}</p>
-                      <p className="text-xs text-[#94a3b8] mt-0.5">{role.period}</p>
-                    </div>
+                  <div className="mb-3">
+                    <h3 className="text-xl font-bold text-white font-heading">{role.company}</h3>
+                    <p className="text-sm text-[#94a3b8]">{role.role}</p>
+                    <p className="text-xs text-[#94a3b8] mt-0.5">{role.period}</p>
                   </div>
 
                   <p className="text-[#e2e8f0] text-sm md:text-[15px] leading-relaxed mb-4">
