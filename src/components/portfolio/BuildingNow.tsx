@@ -21,7 +21,7 @@ const BuildingNow = () => {
       description:
         "Exploring how LLMs and agent architectures transform enterprise workflows — complex onboarding, policy-aware routing, and intelligent triage systems.",
       tags: ["Python", "Claude API", "Enterprise AI"],
-      link: https://github.com/svj-pm/ws-ai-onboarding
+      link: "https://github.com/svj-pm/ws-ai-onboarding",
     },
     {
       icon: "🛍️",
