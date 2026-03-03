@@ -16,20 +16,20 @@ const BuildingNow = () => {
       link: "https://github.com/svj-pm/interview-prep-agent",
     },
     {
+      icon: "🏢",
+      name: "Enterprise AI Prototypes",
+      description:
+        "Exploring how LLMs and agent architectures transform enterprise workflows — complex onboarding, policy-aware routing, and intelligent triage systems.",
+      tags: ["Python", "Claude API", "Enterprise AI"],
+      link: https://github.com/svj-pm/ws-ai-onboarding
+    },
+    {
       icon: "🛍️",
       name: "E-Commerce Marketing Agents",
       description:
         "Autonomous agent framework for content generation, audience targeting, and campaign optimization. Powering a real D2C brand bringing cotton essentials from Indian artisans to US families.",
       tags: ["Python", "Agent Architecture", "E-Commerce"],
-      link: "https://github.com/svj-pm/ecomm-marketing-agents",
-    },
-    {
-      icon: "🏢",
-      name: "Enterprise AI Prototypes",
-      description:
-        "Exploring how LLMs and agent architectures transform enterprise workflows — document classification, policy-aware routing, and intelligent triage systems.",
-      tags: ["Python", "Claude API", "Enterprise AI"],
-      comingSoon: true,
+      comingSoon: true
     },
   ];
 
